@@ -1,38 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8587722334670500"
-     crossorigin="anonymous"></script>
+
+    <!-- =========================
+         BASIC SEO
+    ========================== -->
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        PDF to Excel Converter - Free Online PDF to XLSX | PDF2Excel
+    </title>
 
     <meta name="description"
-        content="Free PDF to Excel converter. Convert PDF files to Excel directly in your browser quickly and securely.">
+          content="Convert PDF to Excel online for free with PDF2Excel. Turn text-based PDF files into Excel XLSX spreadsheets quickly and easily in your browser.">
 
-    <meta name="keywords"
-        content="PDF to Excel, PDF converter, convert PDF to Excel, free PDF converter">
+    <meta name="author"
+          content="PDF2Excel">
 
-    <meta name="author" content="PDF2Excel">
+    <link rel="canonical"
+          href="https://pdf-to-excel-2.netlify.app/">
 
-    <title>PDF2Excel - Free PDF to Excel Converter</title>
+    <!-- =========================
+         GOOGLE ADSENSE
+    ========================== -->
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./style.css">
+    <script async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8587722334670500"
+        crossorigin="anonymous">
+    </script>
 
-    <!-- PDF.js -->
+    <!-- =========================
+         CSS
+    ========================== -->
+
+    <link rel="stylesheet"
+          href="./style.css">
+
+    <!-- =========================
+         PDF.JS
+    ========================== -->
+
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js">
     </script>
 
-    <!-- SheetJS -->
+    <!-- =========================
+         SHEETJS
+    ========================== -->
+
     <script
         src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js">
     </script>
+
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
     <nav class="navbar">
 
         <div class="logo">
@@ -40,18 +71,32 @@
         </div>
 
         <div class="nav-right">
-            <a href="#features">Features</a>
 
-            <button id="themeBtn" type="button" title="Toggle dark mode">
+            <a href="#features">
+                Features
+            </a>
+
+            <button
+                id="themeBtn"
+                type="button"
+                title="Toggle dark mode">
                 🌙
             </button>
+
         </div>
 
     </nav>
 
 
-    <!-- HERO -->
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
     <main>
+
+        <!-- =========================
+             HERO SECTION
+        ========================== -->
 
         <section class="hero">
 
@@ -64,19 +109,28 @@
             </h1>
 
             <p>
-                Convert your PDF files into Excel spreadsheets quickly,
-                easily and securely. Your files are processed directly
-                in your browser.
+                Convert PDF to Excel online for free. Upload a
+                text-based PDF, convert it into an Excel XLSX
+                spreadsheet, and download your file quickly and
+                easily in your browser.
             </p>
 
         </section>
 
 
-        <!-- CONVERTER CARD -->
-        <section class="converter-card">
+        <!-- =========================
+             CONVERTER CARD
+        ========================== -->
+
+        <section
+            class="converter-card"
+            aria-label="PDF to Excel Converter">
 
             <!-- DROP AREA -->
-            <div id="dropArea" class="drop-area">
+
+            <div
+                id="dropArea"
+                class="drop-area">
 
                 <div class="upload-icon">
                     📄
@@ -104,8 +158,7 @@
                 <button
                     type="button"
                     class="browse-btn"
-                    id="browseBtn"
-                >
+                    id="browseBtn">
                     📁 Browse File
                 </button>
 
@@ -116,11 +169,13 @@
             </div>
 
 
-            <!-- FILE INFO -->
+            <!-- =========================
+                 FILE INFO
+            ========================== -->
+
             <div
                 id="fileInfo"
-                class="file-info hidden"
-            >
+                class="file-info hidden">
 
                 <div class="file-icon">
                     📄
@@ -142,29 +197,36 @@
                     type="button"
                     id="removeFile"
                     class="remove-btn"
-                    title="Remove file"
-                >
+                    title="Remove file">
+
                     ✕
+
                 </button>
 
             </div>
 
 
-            <!-- CONVERT BUTTON -->
+            <!-- =========================
+                 CONVERT BUTTON
+            ========================== -->
+
             <button
                 type="button"
                 id="convertBtn"
-                class="convert-btn hidden"
-            >
+                class="convert-btn hidden">
+
                 ⚡ Convert to Excel
+
             </button>
 
 
-            <!-- PROGRESS -->
+            <!-- =========================
+                 PROGRESS
+            ========================== -->
+
             <div
                 id="progressBox"
-                class="progress-box hidden"
-            >
+                class="progress-box hidden">
 
                 <div class="progress-text">
 
@@ -182,19 +244,21 @@
 
                     <div
                         id="progress"
-                        class="progress"
-                    ></div>
+                        class="progress">
+                    </div>
 
                 </div>
 
             </div>
 
 
-            <!-- DOWNLOAD -->
+            <!-- =========================
+                 DOWNLOAD
+            ========================== -->
+
             <div
                 id="downloadBox"
-                class="download-box hidden"
-            >
+                class="download-box hidden">
 
                 <div class="success-icon">
                     ✓
@@ -211,17 +275,19 @@
                 <button
                     type="button"
                     id="downloadBtn"
-                    class="download-btn"
-                >
+                    class="download-btn">
+
                     ⬇ Download Excel
+
                 </button>
 
                 <button
                     type="button"
                     id="newFileBtn"
-                    class="new-file-btn"
-                >
+                    class="new-file-btn">
+
                     + Convert Another File
+
                 </button>
 
             </div>
@@ -229,11 +295,13 @@
         </section>
 
 
-        <!-- FEATURES -->
+        <!-- =========================
+             FEATURES
+        ========================== -->
+
         <section
             id="features"
-            class="features"
-        >
+            class="features">
 
             <div class="feature-card">
 
@@ -291,7 +359,10 @@
         </section>
 
 
-        <!-- INFO -->
+        <!-- =========================
+             SEO INFORMATION
+        ========================== -->
+
         <section class="info-section">
 
             <h2>
@@ -299,10 +370,141 @@
             </h2>
 
             <p>
-                PDF2Excel helps you convert text-based PDF documents
-                into Excel files without installing additional software.
-                Simply select your PDF, convert it and download the
-                generated Excel spreadsheet.
+                PDF2Excel is a free online PDF to Excel converter
+                that helps you convert supported text-based PDF
+                documents into Excel XLSX spreadsheets. The tool
+                is designed to make PDF conversion simple and
+                convenient.
+            </p>
+
+
+            <h2>
+                How to Convert PDF to Excel
+            </h2>
+
+            <ol>
+
+                <li>
+                    Click Browse File and select your PDF.
+                </li>
+
+                <li>
+                    Click Convert to Excel.
+                </li>
+
+                <li>
+                    Wait for the conversion to finish.
+                </li>
+
+                <li>
+                    Click Download Excel to save your XLSX file.
+                </li>
+
+            </ol>
+
+
+            <h2>
+                Why Use PDF2Excel?
+            </h2>
+
+            <ul>
+
+                <li>
+                    Free online PDF to Excel conversion
+                </li>
+
+                <li>
+                    No software installation required
+                </li>
+
+                <li>
+                    Simple and easy-to-use interface
+                </li>
+
+                <li>
+                    Browser-based PDF processing
+                </li>
+
+                <li>
+                    Easy Excel XLSX download
+                </li>
+
+            </ul>
+
+
+            <h2>
+                Supported PDF Documents
+            </h2>
+
+            <p>
+                PDF2Excel works best with text-based PDF documents
+                that have clearly structured text or tables.
+                Conversion results can vary depending on the PDF
+                layout, formatting and document structure.
+            </p>
+
+
+            <h2>
+                Convert PDF Tables to Excel
+            </h2>
+
+            <p>
+                If your PDF contains structured text or tables,
+                PDF2Excel can help organize the extracted content
+                into an Excel spreadsheet. Always review the
+                converted spreadsheet before using it for important
+                business, financial or other critical information.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             FAQ PREVIEW
+        ========================== -->
+
+        <section class="info-section">
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+            <h3>
+                Is PDF2Excel free?
+            </h3>
+
+            <p>
+                PDF2Excel provides a free online PDF to Excel
+                conversion tool.
+            </p>
+
+
+            <h3>
+                Do I need to install software?
+            </h3>
+
+            <p>
+                No. PDF2Excel works directly in a modern web
+                browser, so no additional desktop software is
+                required.
+            </p>
+
+
+            <h3>
+                What type of PDF works best?
+            </h3>
+
+            <p>
+                Text-based PDFs with clearly structured information
+                generally provide better conversion results than
+                scanned images or highly complex layouts.
+            </p>
+
+
+            <p>
+                <a href="./faq.html">
+                    View all PDF2Excel FAQs →
+                </a>
             </p>
 
         </section>
@@ -310,28 +512,53 @@
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
 
-    <div class="footer-logo">
-        PDF<span>2</span>Excel
-    </div>
+        <div class="footer-logo">
+            PDF<span>2</span>Excel
+        </div>
 
-    <div class="footer-links">
-        <a href="./about.html">About Us</a>
-        <a href="./privacy.html">Privacy Policy</a>
-        <a href="./terms.html">Terms & Conditions</a>
-        <a href="./faq.html">FAQ</a>
-        <a href="./contact.html">Contact Us</a>
-    </div>
 
-    <p>
-        © 2026 PDF2Excel. All rights reserved.
-    </p>
+        <div class="footer-links">
 
-</footer>
+            <a href="./about.html">
+                About Us
+            </a>
 
-    <!-- JAVASCRIPT -->
+            <a href="./privacy.html">
+                Privacy Policy
+            </a>
+
+            <a href="./terms.html">
+                Terms & Conditions
+            </a>
+
+            <a href="./faq.html">
+                FAQ
+            </a>
+
+            <a href="./contact.html">
+                Contact Us
+            </a>
+
+        </div>
+
+
+        <p>
+            © 2026 PDF2Excel. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
     <script src="./script.js"></script>
 
 </body>
