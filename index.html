@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Free PDF to Excel converter. Convert PDF files to Excel directly in your browser quickly and securely.">
+
+    <meta name="keywords"
+        content="PDF to Excel, PDF converter, convert PDF to Excel, free PDF converter">
+
+    <meta name="author" content="PDF2Excel">
+
+    <title>PDF2Excel - Free PDF to Excel Converter</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- PDF.js -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js">
+    </script>
+
+    <!-- SheetJS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js">
+    </script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            PDF<span>2</span>Excel
+        </div>
+
+        <div class="nav-right">
+            <a href="#features">Features</a>
+
+            <button id="themeBtn" type="button" title="Toggle dark mode">
+                🌙
+            </button>
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero">
+
+            <div class="badge">
+                ⚡ Fast & Easy PDF Conversion
+            </div>
+
+            <h1>
+                Convert PDF to <span>Excel</span>
+            </h1>
+
+            <p>
+                Convert your PDF files into Excel spreadsheets quickly,
+                easily and securely. Your files are processed directly
+                in your browser.
+            </p>
+
+        </section>
+
+
+        <!-- CONVERTER CARD -->
+        <section class="converter-card">
+
+            <!-- DROP AREA -->
+            <div id="dropArea" class="drop-area">
+
+                <div class="upload-icon">
+                    📄
+                </div>
+
+                <h2>
+                    Upload your PDF
+                </h2>
+
+                <p>
+                    Drag & Drop your PDF file here
+                </p>
+
+                <div class="or-text">
+                    OR
+                </div>
+
+                <input
+                    type="file"
+                    id="pdfFile"
+                    accept=".pdf,application/pdf"
+                    hidden
+                >
+
+                <button
+                    type="button"
+                    class="browse-btn"
+                    id="browseBtn"
+                >
+                    📁 Browse File
+                </button>
+
+                <small>
+                    Maximum recommended file size: 50 MB
+                </small>
+
+            </div>
+
+
+            <!-- FILE INFO -->
+            <div
+                id="fileInfo"
+                class="file-info hidden"
+            >
+
+                <div class="file-icon">
+                    📄
+                </div>
+
+                <div class="file-details">
+
+                    <h3 id="fileName">
+                        filename.pdf
+                    </h3>
+
+                    <p id="fileSize">
+                        0 MB
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="removeFile"
+                    class="remove-btn"
+                    title="Remove file"
+                >
+                    ✕
+                </button>
+
+            </div>
+
+
+            <!-- CONVERT BUTTON -->
+            <button
+                type="button"
+                id="convertBtn"
+                class="convert-btn hidden"
+            >
+                ⚡ Convert to Excel
+            </button>
+
+
+            <!-- PROGRESS -->
+            <div
+                id="progressBox"
+                class="progress-box hidden"
+            >
+
+                <div class="progress-text">
+
+                    <span id="statusText">
+                        Preparing...
+                    </span>
+
+                    <strong id="progressPercent">
+                        0%
+                    </strong>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progress"
+                        class="progress"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DOWNLOAD -->
+            <div
+                id="downloadBox"
+                class="download-box hidden"
+            >
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+                <h2>
+                    Conversion Complete!
+                </h2>
+
+                <p>
+                    Your Excel file is ready to download.
+                </p>
+
+                <button
+                    type="button"
+                    id="downloadBtn"
+                    class="download-btn"
+                >
+                    ⬇ Download Excel
+                </button>
+
+                <button
+                    type="button"
+                    id="newFileBtn"
+                    class="new-file-btn"
+                >
+                    + Convert Another File
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURES -->
+        <section
+            id="features"
+            class="features"
+        >
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🔒
+                </div>
+
+                <h3>
+                    Secure
+                </h3>
+
+                <p>
+                    Your PDF is processed directly in your browser.
+                    Files are not uploaded to our server.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Fast
+                </h3>
+
+                <p>
+                    Convert PDF pages into Excel spreadsheets
+                    quickly and easily.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📊
+                </div>
+
+                <h3>
+                    Smart
+                </h3>
+
+                <p>
+                    Text is organized page by page and
+                    line by line.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- INFO -->
+        <section class="info-section">
+
+            <h2>
+                Free PDF to Excel Converter
+            </h2>
+
+            <p>
+                PDF2Excel helps you convert text-based PDF documents
+                into Excel files without installing additional software.
+                Simply select your PDF, convert it and download the
+                generated Excel spreadsheet.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            PDF<span>2</span>Excel
+        </div>
+
+        <p>
+            © 2026 PDF2Excel. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="./script.js"></script>
+
+</body>
+</html>
